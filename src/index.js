@@ -11,7 +11,13 @@ const data={
 }
 
 app.get('/',(req,res)=>{
+    // console.log('res',res)
     res.render('index',data)
 })
 
-app.listen(3000)
+app.use(function(req, res, next) {
+    res.status(404).send('Sorry cant find that!');
+  });
+
+
+app.listen(3001)

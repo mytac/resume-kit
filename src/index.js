@@ -4,11 +4,7 @@ const app=express()
 app.set('view engine','ejs')
 app.use('/assets',express.static('assets'))
 
-const data={
-    name:'a',
-    sex:'男',
-    content:'dasdasdasidoais'
-}
+const data=require('./config.json')
 
 app.get('/',(req,res)=>{
     // console.log('res',res)

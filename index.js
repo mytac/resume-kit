@@ -15,7 +15,7 @@ const prompts = require('prompts');
             name: 'isChinese',
             initial: true,
             message: 'Is the default language Chinese?' 
-        }
+        },
     ];
 
     console.log('Initial configuration...')

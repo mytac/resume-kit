@@ -14,7 +14,7 @@ function portIsOccupied (port){
                 resolve(portIsOccupied(port+1))
                 console.log(`this port ${port} is occupied.try another.`)
             }else{
-                resolve(err)
+                reject(err)
             }
         })
     })
@@ -23,3 +23,4 @@ function portIsOccupied (port){
 
 
 module.exports=portIsOccupied
+

@@ -17,9 +17,9 @@ app.use(function(req, res, next) {
     res.status(404).send('Sorry cant find that!');
   });
 
-  portIsOccupied(3000).then(port=>{
+portIsOccupied(3000).then(port=>{
     app.listen(port,()=>{
         console.log(`start http://localhost:${port}`)
-        c.exec(`start http://localhost:${port}`)
+        // c.exec(`start http://localhost:${port}`)
     })
-  })
+})

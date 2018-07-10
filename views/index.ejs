@@ -13,8 +13,7 @@
     <div class="container">
         <img src=<%-avatar%> alt="" class="avatar"/>
         <p class="baseColor h1">
-            <%=name%>&nbsp;&nbsp;
-                <%=age%>
+            <%=name%>,&nbsp;&nbsp;<%=age%>,&nbsp;&nbsp;<%=place%>
         </p>
         <p class="baseColor job">
             <%=job%>
@@ -43,20 +42,20 @@
             </div>
             <div class="right-column">
                 <p class="baseColor h1">Experience</p>
-                <%for(let i of career){%>
+                <%for(let i in career){%>
                     <div class="right-wrapper baseColor">
                         <div class="timeline">
-                            <p class="date"><%=i.date%></p>
+                            <p class="date"><%=career[i].date%></p>
                             <div class="pot"></div>
-                            <div class="line"></div>
+                            <div class=<%= (i!=career.length-1?'line':'')%>></div>
                         </div>
 
                         <div class="content">
                             <p class="h2 bold no-spacing">
-                                <%=i.company%>
+                                <%=career[i].company%>
                             </p>
                             <p>
-                                <%=i.descrition%>
+                                <%=career[i].descrition%>
                             </p>
                         </div>
                     </div>
@@ -68,8 +67,8 @@
             <div class="row profileList">
                     <%for(let i in career){%>
                         <div class="col baseColor profileColumn <%= (i!=career.length-1?'border-dash-right':'') %>">
-                                <%=career[i].date%>
-                                <p class=""> <%=career[i].company%></p>
+                                
+                                <p class=""> <span class="date"><%=career[i].date%></span><%=career[i].company%></p>
                                
                                 <p  class="">
                                         <%=career[i].descrition%>

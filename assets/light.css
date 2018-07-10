@@ -38,7 +38,7 @@ body{
 .right-column{
     width:69%;
     height:100%;
-    margin-left: 10px;
+    margin-left: 50px;
 }
 .right-column>div{
     width:100%;
@@ -51,7 +51,7 @@ body{
 }
 p.date{
     position: absolute;
-    left: -39px;
+    left: -50px;
     top: -12px;
 }
 
@@ -85,6 +85,9 @@ p.date{
     height: 187px;
     padding:0 50px;
 }
+.profileList span{
+     padding-right: 50px;
+  }
 
 @media screen and (max-width: 1024px) {  
     .row0{
@@ -99,7 +102,7 @@ p.date{
         width:100%;
         margin-left: 0;
         border-bottom:1px dashed #57502d;
-     }
+     } 
      .pot{
         display: none;
      }
@@ -112,5 +115,8 @@ p.date{
      .profileColumn{
          border:0;
         margin-bottom: 35px;
+     }
+     footer>p{
+         margin-top:10px !important;
      }
 }

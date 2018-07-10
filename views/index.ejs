@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="root">
         <img src=<%-avatar%> alt="" class="avatar"/>
         <p class="baseColor h1">
             <%=name%>,&nbsp;&nbsp;<%=age%>,&nbsp;&nbsp;<%=place%>
@@ -80,8 +80,27 @@
         </div>
     </div>
     <footer>
-        <p class="baseColor no-spacing margin50 text-right marginR50">created by <a href="https://github.com/mytac/resume-kit">github.com/mytac/resume-kit</a></span>
+        <p class="baseColor no-spacing margin50 text-right marginR50">
+                <button class="marginR50" onclick="print()">保存pdf</button>
+            created by <a href="https://github.com/mytac/resume-kit">github.com/mytac/resume-kit</a></span>
     </footer>
+
 </body>
+<script src="../assets/html2pdf.bundle.min.js"></script>
+<script>
+    function print(){
+    var element = document.getElementsByTagName('body')[0];
+    console.log('element',element)
+    var opt = {
+  margin:       0,
+  filename:     'myfile.pdf',
+  image:        { type: 'jpeg', quality: 0.98 },
+  html2canvas:  { scale: 2 },
+  jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+};
+    var worker = html2pdf(element,opt);
+    console.log('worker',worker)
+    }
+</script>
 
 </html>

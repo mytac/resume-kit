@@ -14,9 +14,9 @@ body{
 
 .avatar{
     display:block;
-    width:200px;
-    height:200px;
-    border-radius: 100px;
+    width:150px;
+    height:150px;
+    border-radius: 75px;
     margin: 0 auto;
 }
 
@@ -24,18 +24,13 @@ body{
     color:#57502d;
 }
 
-.h1{
-    font-size: 30px;
-}
-
 .job{
     font-size: 25px; 
 }
 
 .left-column{
-    text-align: left;
+    margin-top:25px;
     width:30%;
-    height:100%;
     font-size:20px;
     border-right: 2px dotted #57502d;
     padding-bottom: 50px;
@@ -43,4 +38,79 @@ body{
 .right-column{
     width:69%;
     height:100%;
+    margin-left: 10px;
+}
+.right-column>div{
+    width:100%;
+}
+
+.timeline{
+    position: relative;
+    width:12%;
+    height:100%;
+}
+p.date{
+    position: absolute;
+    left: -39px;
+    top: -12px;
+}
+
+.content{
+    text-align: left;
+    width:80%;
+
+}
+
+.pot{
+    position: relative;
+    z-index: 10;
+    left: 20px;
+    width: 25px;
+    height: 25px;
+    border-radius: 12.5px;
+    background-color: #57502d;
+}
+
+.line{
+    position: relative;
+    left:30px;
+    width:5px;
+    height:100%;
+    background-color: #57502d;
+}
+
+.right-wrapper{
+    display: flex;
+    flex-direction: row;
+    height: 187px;
+    padding:0 50px;
+}
+
+@media screen and (max-width: 1024px) {  
+    .row0{
+        flex-direction: column;
+    }
+    .left-column {
+        width:100%;
+        border:0;
+        border-bottom:1px dashed #57502d;
+     }
+     .right-column{
+        width:100%;
+        margin-left: 0;
+        border-bottom:1px dashed #57502d;
+     }
+     .pot{
+        display: none;
+     }
+     .line{
+        display: none;
+     }
+     .profileList{
+         flex-wrap: wrap
+     }
+     .profileColumn{
+         border:0;
+        margin-bottom: 35px;
+     }
 }

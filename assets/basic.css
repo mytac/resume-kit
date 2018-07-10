@@ -8,11 +8,48 @@ html,body{
     left:0;
     right:0;
 }
+.col{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+}
+.col>div{
+    flex-direction: row;
+}
 .row{
     width:100%;
     display:flex;
-    flex-direction: row;
+    flex-direction: row; 
 }
-.row>div{
-    flex-direction: row;
+.bold{
+    font-weight: bold;
+}
+.no-spacing{
+    padding:0;
+    margin:0;
+}
+.margin25{
+    margin-top: 25px;
+}
+
+.margin50{
+    margin-top: 50px;
+}
+
+.marginR50{
+    margin-right: 50px;
+}
+.h1{
+    font-size: 30px;
+}
+.h2{
+    font-size: 25px;  
+}
+
+.border-dash-right{
+    border-right: 1px dashed;
+}
+
+.text-right{
+    text-align: right;
 }

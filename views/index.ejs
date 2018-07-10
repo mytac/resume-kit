@@ -1,30 +1,88 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>EJS模板</title>
     <link rel="stylesheet" href="../assets/basic.css">
     <link rel="stylesheet" href="../assets/light.css">
 </head>
+
 <body>
     <div class="container">
         <img src=<%-avatar%> alt="" class="avatar"/>
-        <p class="baseColor h1"><%=name%>&nbsp;&nbsp;<%=age%></p>
-        <p class="baseColor job"><%=job%></p>
-        <div class="row">
-                <div class="left-column">
-                        <p class="baseColor h1">Info</p>
-                        <%for(let i in contact){%>
-                            <p class="baseColor"><%=i%>：<%=contact[i]%></p>
-                            <%}%>
+        <p class="baseColor h1">
+            <%=name%>&nbsp;&nbsp;
+                <%=age%>
+        </p>
+        <p class="baseColor job">
+            <%=job%>
+        </p>
+        <div class="row margin25 row0">
+            <div class="left-column">
+                <!-- <p class="baseColor h1">Info</p> -->
+                <p>
+                        <%=college.date%> &nbsp;&nbsp; <%=college.school%>
+                </p>
+                <p>
+                        <%=college.academy%> &nbsp;&nbsp; <%=college.subject%>
+                </p>
+                <%for(let i in contact){%>
+                    <p class="baseColor">
+                        <%=i%>：
+                            <%=contact[i]%>
+                    </p>
+                    <%} %>
+                <p>skills</p>
+                <%for(let i of skills){%>
+                    <span class="baseColor">
+                        <%=i%>
+                    </span>
+                    <%} %>
+            </div>
+            <div class="right-column">
+                <p class="baseColor h1">Experience</p>
+                <%for(let i of career){%>
+                    <div class="right-wrapper baseColor">
+                        <div class="timeline">
+                            <p class="date"><%=i.date%></p>
+                            <div class="pot"></div>
+                            <div class="line"></div>
+                        </div>
+
+                        <div class="content">
+                            <p class="h2 bold no-spacing">
+                                <%=i.company%>
+                            </p>
+                            <p>
+                                <%=i.descrition%>
+                            </p>
+                        </div>
                     </div>
-                    <div class="right-column">
-                            <p class="baseColor h1">Experience</p>
-                    </div>
+                    <%}%>
+            </div>
+        </div>
+        <div class="margin50">
+            <p class="h1 baseColor">profile</p>
+            <div class="row profileList">
+                    <%for(let i in career){%>
+                        <div class="col baseColor profileColumn <%= (i!=career.length-1?'border-dash-right':'') %>">
+                                <%=career[i].date%>
+                                <p class=""> <%=career[i].company%></p>
+                               
+                                <p  class="">
+                                        <%=career[i].descrition%>
+                                </p>
+                        </div>
+                    <%} %>
+            </div>
+                
         </div>
     </div>
- </body>
+    <footer>
+        <p class="baseColor no-spacing margin50 text-right marginR50">created by <a href="https://github.com/mytac/resume-kit">github.com/mytac/resume-kit</a></span>
+    </footer>
+</body>
 
- </html>
+</html>

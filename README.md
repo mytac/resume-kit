@@ -1,14 +1,25 @@
 # resume-kit
-## 开发步骤
-1. node命令
-2. 根据命令生成模板json文件
-```json
-{
-    theme:'light', // 主题名：应当在这里
-    isChinese:true, // 模板是否为中文
-    themeConfig:{
-        mainColor:'#fff'， // 用户自定颜色
-    }，
-}
+## 使用步骤
+先把项目fork下来；安装依赖
+
+### 1. 生成配置文件
+执行
 ```
-3.主题配置
+$ yarn start
+```
+按照提示选择，在文件夹中会生成`resume-config.json`，这是一个配置文件。（目前这个文件没有太大的用处=v=）。
+
+同时在`src/`会生成`config.json`，把你的信息写入这个文件。
+
+### 2. 预览简历信息
+执行
+```
+$ yarn preview
+```
+可以在浏览器看到预览页面
+### 3. 生成静态文件
+执行
+```
+$ yarn build
+```
+在`build`文件夹下会生成一个静态页面~

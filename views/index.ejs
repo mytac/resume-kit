@@ -88,17 +88,16 @@
 </body>
 <script src="../assets/html2pdf.bundle.min.js"></script>
 <script>
+
     function print(){
-    var element = document.getElementsByTagName('body')[0];
-    console.log('element',element)
+    var element = document.getElementById('root')
     var opt = {
-  margin:       0,
-  filename:     'myfile.pdf',
-  image:        { type: 'jpeg', quality: 0.98 },
-  html2canvas:  { scale: 2 },
-  jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+        margin:       -50,
+        filename:     'myfile.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { backgroundColor :'#fff',scale: 1.5, useCORS:true,proxy:'http://localhost:3000' },
 };
-    var worker = html2pdf(element,opt);
+    var worker = html2pdf().from(element).set(opt).save();
     console.log('worker',worker)
     }
 </script>

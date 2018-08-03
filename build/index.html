@@ -1,23 +1,154 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>EJS模板</title>
+    <link rel="stylesheet" href="../assets/basic.css">
     <link rel="stylesheet" href="../assets/light.css">
 </head>
+
 <body>
-    <h1>EJS模板引擎</h1>
-    <p>这是很简单的一个小流程就不在一一的标注流程了,注释的很清楚了</p>
-    <p>这里是姓名: <span>a</span></p><!--这里显示js文件传过来的name值:webarn-->
- <p>这里是性别: <span>男</span></p><!--这里显示js文件传过来的sex值:'男'-->
+    <div class="container" id="root">
+        <img src=https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531139433009&di=e86d7a6f0662bc0a5989b4f40745a44f&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201601%2F04%2F20160104154736_XRShM.jpeg alt="" class="avatar"/>
+        <p class="baseColor h1">
+            小A,&nbsp;&nbsp;18,&nbsp;&nbsp;大溪地
+        </p>
+        <p class="baseColor job">
+            FRONT-END DEVELOPER
+        </p>
+        <div class="row margin25 row0">
+            <div class="left-column">
+                <!-- <p class="baseColor h1">Info</p> -->
+                <p>
+                        2010.1~2014.1 &nbsp;&nbsp; 学校名字
+                </p>
+                <p>
+                        学院名 &nbsp;&nbsp; 专业名
+                </p>
+                
+                    <p class="baseColor">
+                        tel：
+                            13116127922
+                    </p>
+                    
+                    <p class="baseColor">
+                        email：
+                            my_tac@126.com
+                    </p>
+                    
+                    <p class="baseColor">
+                        github：
+                            github.com/mytac
+                    </p>
+                    
+                    <p class="baseColor">
+                        wechat：
+                            tac_coolzjz
+                    </p>
+                    
+                <p>skills</p>
+                
+                    <span class="baseColor">
+                        react
+                    </span>
+                    
+                    <span class="baseColor">
+                        vue
+                    </span>
+                    
+                    <span class="baseColor">
+                        webpack
+                    </span>
+                    
+            </div>
+            <div class="right-column">
+                <p class="baseColor h1">Experience</p>
+                
+                    <div class="right-wrapper baseColor">
+                        <div class="timeline">
+                            <p class="date">2010.1</p>
+                            <div class="pot"></div>
+                            <div class=line></div>
+                        </div>
 
+                        <div class="content">
+                            <p class="h2 bold no-spacing">
+                                公司名
+                            </p>
+                            <p>
+                                bla bla bla
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="right-wrapper baseColor">
+                        <div class="timeline">
+                            <p class="date">2010.2</p>
+                            <div class="pot"></div>
+                            <div class=></div>
+                        </div>
 
- <p>这里是性别: <span>dasdasdasidoais</span></p><!--这里显示js文件传过来的content值,可以死是json,接受服务器所传的东西,方便前段展示-->
+                        <div class="content">
+                            <p class="h2 bold no-spacing">
+                                公司名
+                            </p>
+                            <p>
+                                bla bla bla
+                            </p>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+        <div class="margin50">
+            <p class="h1 baseColor">profile</p>
+            <div class="row profileList">
+                    
+                        <div class="col baseColor profileColumn border-dash-right">
+                                
+                                <p class=""> <span class="date">2010.1</span>公司名</p>
+                               
+                                <p  class="">
+                                        bla bla bla
+                                </p>
+                        </div>
+                    
+                        <div class="col baseColor profileColumn ">
+                                
+                                <p class=""> <span class="date">2010.2</span>公司名</p>
+                               
+                                <p  class="">
+                                        bla bla bla
+                                </p>
+                        </div>
+                    
+            </div>
+                
+        </div>
+    </div>
+    <footer>
+        <p class="baseColor no-spacing margin50 text-right marginR50">
+                <button class="marginR50" onclick="print()">保存pdf</button>
+            created by <a href="https://github.com/mytac/resume-kit">github.com/mytac/resume-kit</a></span>
+    </footer>
 
+</body>
+<script src="../assets/html2pdf.bundle.min.js"></script>
+<script>
 
- </body>
+    function print(){
+    var element = document.getElementById('root')
+    var opt = {
+        margin:       -50,
+        filename:     'myfile.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { backgroundColor :'#fff',scale: 1.5, useCORS:true,proxy:'http://localhost:3000' },
+};
+    var worker = html2pdf().from(element).set(opt).save();
+    console.log('worker',worker)
+    }
+</script>
 
- </html>
+</html>

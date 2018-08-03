@@ -11,72 +11,90 @@
 
 <body>
     <div class="container" id="root">
-        <img src=<%-avatar%> alt="" class="avatar"/>
-        <p class="baseColor h1">
-            <%=name%>,&nbsp;&nbsp;<%=age%>,&nbsp;&nbsp;<%=place%>
-        </p>
-        <p class="baseColor job">
-            <%=job%>
-        </p>
-        <div class="row margin25 row0">
-            <div class="left-column">
-                <!-- <p class="baseColor h1">Info</p> -->
-                <p>
-                        <%=college.date%> &nbsp;&nbsp; <%=college.school%>
-                </p>
-                <p>
-                        <%=college.academy%> &nbsp;&nbsp; <%=college.subject%>
-                </p>
-                <%for(let i in contact){%>
-                    <p class="baseColor">
-                        <%=i%>：
-                            <%=contact[i]%>
-                    </p>
-                    <%} %>
-                <p>skills</p>
-                <%for(let i of skills){%>
-                    <span class="baseColor">
-                        <%=i%>
-                    </span>
-                    <%} %>
+        <div class="left">
+            <img src=<%-avatar%> alt="" class="avatar"/>
+            <p><%=name%></p>
+            <p> <%=job%></p>
+            <div class="info-block">
+                <p class="block-title">个人资料</p>
+                <p>性  别：<%=sex%></p>
+                <p>年  龄：<%=age%></p>
+                <p>常住地：<%=place%></p>
             </div>
-            <div class="right-column">
-                <p class="baseColor h1">Experience</p>
-                <%for(let i in career){%>
-                    <div class="right-wrapper baseColor">
-                        <div class="timeline">
-                            <p class="date"><%=career[i].date%></p>
-                            <div class="pot"></div>
-                            <div class=<%= (i!=career.length-1?'line':'')%>></div>
-                        </div>
 
-                        <div class="content">
-                            <p class="h2 bold no-spacing">
-                                <%=career[i].company%>
-                            </p>
-                            <p>
-                                <%=career[i].descrition%>
-                            </p>
-                        </div>
-                    </div>
-                    <%}%>
+            <div class="info-block">
+            <p class="block-title">联系方式</p>
+                <%for(let i in contact){%>
+                <p class="baseColor">
+                    <%=i%>：
+                        <%=contact[i]%>
+                </p>
+            <%} %>
             </div>
+
+            <div class="info-block">
+                <p class="block-title">掌握技能</p>
+                <%for(let i in skills){%>
+                <p class="baseColor">
+                    <%=i%>：
+                    <div class="skill-bar"><div class="skill-bar-inner" style="width:<%=skills[i]%>"></div></div>
+                </p>
+                <%} %>
+            </div>
+
+
         </div>
-        <div class="margin50">
-            <p class="h1 baseColor">profile</p>
-            <div class="row profileList">
-                    <%for(let i in career){%>
-                        <div class="col baseColor profileColumn <%= (i!=career.length-1?'border-dash-right':'') %>">
-                                
-                                <p class=""> <span class="date"><%=career[i].date%></span><%=career[i].company%></p>
-                               
-                                <p  class="">
-                                        <%=career[i].descrition%>
-                                </p>
-                        </div>
-                    <%} %>
+        <div class="right">
+
+            <div class="content-block">
+                <div class="title">教育背景</div>
+                <div class="flex">
+                    <p><%=college.date%></p>
+                    <p><%=college.school%></p>
+                    <p><%=college.subject%></p>
+                </div>
+                <p><%=college.description%></p>
             </div>
-                
+
+            <div class="content-block">
+                <div class="title">工作经历</div>
+                <%for(let i in career){%>
+                <div class="wrapper">
+                    <div class="flex">
+                        <p><%=career[i].date%></p>
+                        <p><%=career[i].company%></p>
+                        <p><%=career[i].job%></p>
+                    </div>
+                    <ul class="list">
+                    <%for(let j of career[i].descrition){%>
+                        <li><%=j%></li>
+                    <%} %>
+                    </ul>
+                </div>
+                <%} %>
+            </div>
+
+            <div class="content-block">
+                <div class="title">项目经验</div>
+                <%for(let i in experience){%>
+                <div class="wrapper">
+                    <div class="flex">
+                        <p><%=experience[i].date%></p>
+                        <p><%=experience[i].project%></p>
+                    </div>
+                    <ul class="list">
+                    <%for(let j of experience[i].descrition){%>
+                        <li><%=j%></li>
+                    <%} %>
+                    </ul>
+                </div>
+                <%} %>
+            </div>
+
+            <div class="content-block">
+                <div class="title">个人介绍</div>
+                <p><%=other%></p>
+            </div> 
         </div>
     </div>
     <footer>

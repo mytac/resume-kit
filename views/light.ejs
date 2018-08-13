@@ -25,7 +25,7 @@
             <div class="info-block">
             <p class="block-title">联系方式</p>
                 <%for(let i in contact){%>
-                <p class="baseColor">
+                <p>
                     <%=i%>：
                         <%=contact[i]%>
                 </p>
@@ -34,12 +34,14 @@
 
             <div class="info-block">
                 <p class="block-title">掌握技能</p>
-                <%for(let i in skills){%>
-                <p class="baseColor">
-                    <%=i%>：
-                    <div class="skill-bar"><div class="skill-bar-inner" style="width:<%=skills[i]%>"></div></div>
-                </p>
-                <%} %>
+                <div class="skill">
+                    <%for(let i in skills){%>
+                        <p class="skill-label">
+                            <span><%=i%>：</span>
+                            <div class="skill-bar"><div class="skill-bar-inner" style="width:<%=(skills[i]*100+'%')%>"></div></div>
+                        </p>
+                        <%} %>
+                </div>
             </div>
 
 

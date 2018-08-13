@@ -14,11 +14,6 @@ body{
     text-align:center;
 }
 
-.container>div{
-    
-}
-
-
 .left{
     width:30%;
     height: 100%;
@@ -27,6 +22,48 @@ body{
     margin: 0 auto;
     padding-top: 10px;
     background-color: #0080c0;
+    color:#fff;
+    padding-top: 60px;
+}
+
+.left .block-title{
+    display: inline-block;
+    height:60px;
+    line-height: 60px;
+    vertical-align: middle;
+    width:100%;
+    background-color: #fff;
+    color:#0080c0;
+    font-weight: bold;
+    font-size: 25px;
+   
+}
+
+div.skill{
+    padding: 0 20px;
+    text-align: left;
+}
+
+.left p.skill-label{
+    display: inline-block;
+    margin-bottom: 0;
+}
+.skill-label  span{
+    display: inline-block;
+    width:100px;
+    text-align: right;
+}
+
+.left .skill-bar{
+    display: inline-block;
+    height:10px;
+    width:100px;
+    background-color:rgba(255, 255, 255, 0.7)
+}
+
+.left .skill-bar-inner{
+    height:10px;
+    background-color:#fff;
 }
 
 .right{
@@ -35,6 +72,22 @@ body{
     height: 100%;
     text-align: center;
     margin: 0 auto;
+    background-color: #fff;
+    padding-top: 120px;
+}
+
+.content-block{
+    padding: 0 50px;
+    text-align: left;
+    margin-bottom: 30px;
+
+}
+
+.content-block >.title{
+    border-bottom: 2px solid #0080c0;
+    color: #0080c0;
+    font-size:30px;
+    font-weight:bold;
 }
 
 .avatar{

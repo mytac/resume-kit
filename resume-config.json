@@ -1,1 +1,5 @@
-{"theme":"light","isChinese":true}
+{
+    "theme": "light",
+    "isChinese": true,
+    "isGenerate": true
+}

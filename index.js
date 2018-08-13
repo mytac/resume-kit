@@ -16,12 +16,20 @@ const prompts = require('prompts');
       initial: true,
       message: 'Is the default language Chinese?',
     },
+    {
+      type: 'confirm',
+      name: 'isGenerate',
+      initial: true,
+      message: 'Is generate data template?',
+    },
   ];
 
   console.log('Initial configuration...');
-  const answers = JSON.stringify(await prompts(options));
+  const answer = await prompts(options);
+  console.log('isGenerate', answer.isGenerate);
+  const answersString = JSON.stringify(answer, null, 4);
 
-  fs.writeFile('resume-config.json', answers, () => {
-    console.log(answers);
+  fs.writeFile('resume-config.json', answersString, () => {
+    console.log(answersString);
   });
 }());

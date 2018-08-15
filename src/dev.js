@@ -1,8 +1,6 @@
 const express = require('express');
-// const ejs = require('ejs');
 
 const app = express();
-// const c = require('child_process');
 const portIsOccupied = require('./utils/portIsOccupied');
 const { theme,resumeConfig } = require('../resume-config.json');
 

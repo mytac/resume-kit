@@ -7,10 +7,11 @@
 ```
 $ yarn start
 ```
-按照提示选择，在文件夹中会生成`resume-config.json`，这是一个配置文件。（目前这个文件没有太大的用处=v=）。
+按照提示选择，在文件夹中会生成`resume-config.json`，这是一个配置文件；按照提示进行操作，将会生成一个简历数据模板`(/resume-config.json)`。
 
-同时在`src/`会生成`config.json`，把你的信息写入这个文件。
+打开`resume-config.json`文件，在`resumeConfig`字段下，按照提示信息编辑你的简历数据，保存。
 
+![demo](https://s22.postimg.cc/g6jvl1gwx/image.gif)
 ### 2. 预览简历信息
 执行
 ```

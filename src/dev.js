@@ -4,16 +4,14 @@ const express = require('express');
 const app = express();
 // const c = require('child_process');
 const portIsOccupied = require('./utils/portIsOccupied');
-const { theme } = require('../resume-config.json');
+const { theme,resumeConfig } = require('../resume-config.json');
 
 app.set('view engine', 'ejs');
 app.use('/assets', express.static('assets'));
 
-const data = require('./config.json');
-
 app.get('/', (req, res) => {
   // console.log('res',res)
-  res.render(theme, data);
+  res.render(theme, resumeConfig);
 });
 
 app.use((req, res) => {

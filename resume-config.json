@@ -25,12 +25,22 @@
         },
         "experience": [
             {
-                "date": "2018.7",
+                "date": "2019.2~至今",
+                "project": "Hustler(A股短线炒股助手)",
+                "descrition": [
+                    "目前主要开发的是node测试版，根据用户设置的个股代码组合和阈值，使用puppeteer轮询抓取东方财富网的实时成交价，与昨日收盘的成交价进行对比，当接近用户设定的阈值，给用户弹出提示，用于及时加仓或减仓。",
+                    "未来的阶段是用Flutter开发手机版和使用scrapy进行爬虫，可以在手机上实时接收个股消息，以及降低系统损耗。",
+                    "hustler极大降低了用户的看盘时间，使用户更专注于自己的工作，减少了用户因实时波动产生的焦虑感和违背于用户自身交易规则的操作。",
+                    "项目链接: https://github.com/mytac/Hustler"
+                ]
+            },
+            {
+                "date": "2018.7~2018.8",
                 "project": "resume-kit",
                 "descrition": [
-                    "一个简历模板，只填写json，生成不同样式，可自行配置",
-                    "ejs+express来渲染数据并生成静态文件",
-                    "使用prompts与用户进行命令交互"
+                    "按照命令行提示写好json，运行命令即可生成简历，支持样式自定义，生成网页静态文件用于用户部署，和简历转pdf下载功能。",
+                    "使用prompts创建用户友好的提示命令，通过express将json中的数据绑定到ejs模板，和用户选择的样式进行渲染。",
+                    "项目链接: https://github.com/mytac/resume-kit"
                 ]
             },
             {
@@ -38,8 +48,9 @@
                 "project": "cloud-memo",
                 "descrition": [
                     "使用react-native开发的云笔记app，可自行配置服务器",
-                    "express+mongodb进行数据的处理和存储",
-                    "支持夜间模式和手势密码"
+                    "express+mongodb进行数据的处理和存储，支持夜间模式和手势密码",
+                    "项目链接：https://github.com/mytac/cloud-memo",
+                    "apk下载地址：https://mytac.github.io/cloud-memo-download"
                 ]
             }
         ],
@@ -49,9 +60,11 @@
                 "company": "天津青芒数据网络技术",
                 "job": "前端工程师",
                 "descrition": [
-                    "使用dva+antd开发和维护后台管理平台",
-                    "使用webpack+react+antd构建自助购扫脸付款hybrid app，使用redux进行状态管理，提高了开发和维护效率",
-                    "使用flow+eslint进行代码规范检查，并在git hooks期间配置commit-msg检查"
+                    "使用dva+antd+es6独立开发和维护聚合支付后台管理平台，用hoc替代了老项目中对antd组件的多重封装，使代码更为干净可读性更高，在项目中增加了对ali-oss的直接打包部署支持，减少了部署流程的步骤，使线上项目迭代更快。",
+                    "使用typescript+taro+redux独立重构青芒合伙人小程序，使小程序的开发更加贴近前端工程化，typescript让代码提示更完备，taro使项目可以打包编译为多个平台的小程序，提高了产品的开发效率，扩展了公司的业务。",
+                    "使用webpack+react+antd独立构建自助购扫脸付款hybrid app，使用redux进行状态管理，提高了开发和维护效率",
+                    "使用vue+flex独立开发手机版积分商城",
+                    "使用umi+antd开发驿站团后台管理 "
                 ]
             },
             {
@@ -59,10 +72,9 @@
                 "company": "天津在线回声科技",
                 "job": "前端开发",
                 "descrition": [
-                    "用react native开发一个期货交易app平台",
-                    "本人主要负责扫一扫登录模块和资产图表模块的开发与维护",
-                    "使用react-native-camera扫描解析二维码，采用victory-native和react-native-svg按照资产比例绘制环形图",
-                    "使用react-navigation作为导航栏和路由组件等"
+                    "用react native开发一个期货交易app，本人主要负责扫一扫登录模块和资产图表模块的开发与维护。使用react-native-camera扫描解析二维码，采用victory-native和react-native-svg按照资产比例绘制环形图。",
+                    "负责app端webview内嵌页的开发，以及用react技术栈进行重构。",
+                    "根据产品原型，使用hui和jquery对web运营端进行开发和维护。"
                 ]
             }
         ],
@@ -74,6 +86,6 @@
             "vue": 0.3,
             "node":0.3
         },
-        "other": "这里写点备注的东西"
+        "other": "本人具有较强的逻辑分析能力和和判断能力，优秀的沟通能力，注重细节，高度的责任心及良好的职业操守。 诚实守信，为人谦虚、勤奋努力，具有高度的团队合作精神和工作热情，有强烈的创业意识和创新精神，愿与公司一同成长。"
     }
 }
